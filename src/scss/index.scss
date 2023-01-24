@@ -1,0 +1,77 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+#root {
+  background: #ddd;
+  min-height: 100vh;
+}
+
+.c-app-wrapper {
+  min-height: 100vh;
+  width: 70%;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.c-form-wrapper {
+  max-width: 90%;
+  margin: 0 auto 20px;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 1px 4px 8px rgb(0 0 0 / 20%);
+}
+
+.c-form {
+  &__label {
+    display: block;
+    margin: 0 0 10px;
+    font-size: 16px;
+  }
+
+  &__input {
+    border: 1px solid #ddd;
+    padding: 6px 12px;
+    min-height: 50px;
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+    font-size: 16px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #888;
+  }
+  ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #888;
+  }
+  ::-ms-input-placeholder {
+    /* IE 10+ */
+    color: #888;
+  }
+  :-moz-placeholder {
+    /* Firefox 18- */
+    color: #888;
+  }
+}
+
+.c-images-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
