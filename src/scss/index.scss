@@ -72,6 +72,21 @@ body {
 
 .c-images-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+a.c-image-wrapper {
+  display: block;
+  line-height: 0;
+}
+
+img.c-image {
+  max-width: 100%;
+}
+
+.c-image-column {
+  display: grid;
+  gap: 24px;
+  grid-auto-rows: max-content;
 }
