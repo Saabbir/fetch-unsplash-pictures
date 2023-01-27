@@ -15,7 +15,7 @@ class SearchBar extends React.Component {
       <div className="c-form-wrapper">
         <form className="c-form" onSubmit={this.onFormSubmit}>
           <label htmlFor="c-search-image-input" className="c-form__label">
-            Search Images
+            Search Unsplash Images
           </label>
           <input
             id="c-search-image-input"

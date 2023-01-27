@@ -18,24 +18,34 @@ body {
 
 .c-app-wrapper {
   min-height: 100vh;
-  width: 70%;
   margin: 0 auto;
   background-color: #fff;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.2);
+
+  @media (min-width: 1024px) {
+    width: 80%;
+    max-width: 1200px;
+  }
 }
 
 .c-form-wrapper {
   max-width: 90%;
-  margin: 0 auto 20px;
+  margin: 0 auto 16px;
   padding: 20px;
   border-radius: 4px;
   box-shadow: 1px 4px 8px rgb(0 0 0 / 20%);
+
+  @media (min-width: 1024px) {
+    margin: 0 auto 24px;
+  }
 }
 
 .c-form {
   &__label {
     display: block;
     margin: 0 0 10px;
-    font-size: 16px;
+    font-size: 1rem;
+    font-weight: bold;
   }
 
   &__input {
@@ -54,39 +64,68 @@ body {
 
   ::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
-    color: #888;
+    color: #aaa;
+    font-style: italic;
   }
   ::-moz-placeholder {
     /* Firefox 19+ */
-    color: #888;
+    color: #aaa;
+    font-style: italic;
   }
   ::-ms-input-placeholder {
     /* IE 10+ */
-    color: #888;
+    color: #aaa;
+    font-style: italic;
   }
   :-moz-placeholder {
     /* Firefox 18- */
-    color: #888;
+    color: #aaa;
+    font-style: italic;
   }
 }
 
 .c-images-wrapper {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
+  gap: 16px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
 }
 
 a.c-image-wrapper {
-  display: block;
+  display: grid;
   line-height: 0;
+  color: red;
+  line-height: 1;
+  font-size: 1rem;
 }
 
 img.c-image {
-  max-width: 100%;
+  width: 100%;
 }
 
 .c-image-column {
   display: grid;
-  gap: 24px;
+  gap: 16px;
   grid-auto-rows: max-content;
+
+  &:last-child {
+    @media (min-width: 768px) and (max-width: 1023px) {
+      grid-column-end: span 2;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    gap: 24px;
+  }
+}
+
+.c-is-loading-text {
+  text-align: center;
 }
